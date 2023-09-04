@@ -1,17 +1,17 @@
-Dockerized Artillery Test
+# Dockerized Artillery Test
 
 This repository contains a Dockerized Artillery test for load testing a web application. With this setup, you can easily run the Artillery test in a container, encapsulating the test environment and dependencies.
 
-Prerequisites
+## Prerequisites
 
 Before running the Dockerized Artillery test, ensure you have the following installed on your system:
 
 - Docker
 - Node.js (only if you want to modify and run the Artillery test script)
 
-Usage
+## Usage
 
-Build the Docker Image
+### Build the Docker Image
 
 1. Clone this repository to your local machine.
 
@@ -31,7 +31,7 @@ Build the Docker Image
 
 The Artillery test will run inside the container, and the results will be displayed in your terminal.
 
-Customizing the Test
+### Customizing the Test
 
 If you want to customize the Artillery test script or configuration, you can modify the following files:
 
@@ -40,7 +40,7 @@ If you want to customize the Artillery test script or configuration, you can mod
 
 Make your changes, rebuild the Docker image, and rerun the container to test your custom configuration.
 
-Acknowledgments
+## Acknowledgments
 
 - Artillery - The open-source load testing toolkit used in this project.
 - Docker - The containerization platform.
