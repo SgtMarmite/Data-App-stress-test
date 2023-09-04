@@ -19,7 +19,7 @@ Before running the Dockerized Artillery test, ensure you have the following inst
 
 2. Navigate to the project directory.
 
-   cd dockerized-artillery-test
+   cd Data-App-stress-test
 
 3. Build the Docker image.
 
