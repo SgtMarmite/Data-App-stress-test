@@ -15,7 +15,7 @@ Before running the Dockerized Artillery test, ensure you have the following inst
 
 1. Clone this repository to your local machine.
 
-   git clone https://github.com/yourusername/dockerized-artillery-test.git
+   git clone https://github.com/SgtMarmite/Data-App-stress-test.git
 
 2. Navigate to the project directory.
 
