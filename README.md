@@ -29,6 +29,9 @@ Before running the Dockerized Artillery test, ensure you have the following inst
 
    docker run my-artillery-test
 
+5. (Optional) If you want to modify the target url or stress test settings, edit the hello-world.yml file, 
+rebuild the Docker image and run it again.
+
 The Artillery test will run inside the container, and the results will be displayed in your terminal.
 
 ### Customizing the Test
