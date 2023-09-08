@@ -9,8 +9,14 @@ RUN npm install -g artillery artillery-engine-playwright && \
 WORKDIR /app
 
 # Copy your test configuration file and any necessary scripts
-COPY hello-world.yml /app/
-COPY flows.js /app/
+COPY . /app/
 
-# Define the command to run your Artillery test
-CMD ["artillery", "run", "hello-world.yml"]
+# Create a shell script to run the tests sequentially
+RUN echo "#!/bin/sh" > run_tests.sh && \
+    echo "for file in /app/*.yml; do" >> run_tests.sh && \
+    echo "  artillery run \$file" >> run_tests.sh && \
+    echo "done" >> run_tests.sh && \
+    chmod +x run_tests.sh
+
+# Define the command to run the shell script
+CMD ["./run_tests.sh"]

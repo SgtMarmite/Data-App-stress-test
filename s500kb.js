@@ -1,11 +1,11 @@
-module.exports = { helloFlow };
+module.exports = { s500kb };
 
-async function helloFlow(page) {
+async function s500kb(page) {
   //
   // The code below is just a standard Playwright script:
   //
-  // Go to https://artillery.io/
-  await page.goto('https://sandbox.north-europe.azure.keboola.com/45530968/');
+  // Go to the target URL specified in the environment variable
+  await page.goto('https://sandbox.north-europe.azure.keboola.com/50328125/');
 
   const startTime = Date.now();
   await page.waitForSelector('//*[@id="tabs-bui3-tabpanel-0"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/div/div/div/img');

@@ -1,0 +1,12 @@
+config:
+  target: https://sandbox.north-europe.azure.keboola.com/50328171/
+  phases:
+    - duration: 5   # Duration of this phase in seconds
+      arrivalRate: 2  # Number of new virtual users per second
+  engines:
+    playwright: {}
+  processor: "./xs500kb.js"
+
+scenarios:
+  - engine: playwright
+    testFunction: "xs500kb"
