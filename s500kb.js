@@ -8,7 +8,16 @@ async function s500kb(page) {
   await page.goto('https://sandbox.north-europe.azure.keboola.com/50328125/');
 
   const startTime = Date.now();
-  await page.waitForSelector('//*[@id="tabs-bui3-tabpanel-0"]/div[1]/div/div[3]/div[2]/div[1]/div/div[2]/div/div/div/img');
+  try {
+    // Wait for the selector with a timeout of 5 seconds
+    await page.waitForSelector('//*[@id="root"]/div[1]/div[1]/div/div/div/section/div[1]/div[1]/div/div[12]/div/div/div/div[2]/img', { timeout: 30000 });
+  } catch (error) {
+    // Handle the timeout error here
+    console.error('Page load timeout:', error.message);
+
+    // Throw an error to fail the test
+    throw new Error('Page load timeout');
+  }
   const endTime = Date.now();
 
   // Calculate the time taken in milliseconds

@@ -2,8 +2,8 @@ config:
   name: "S 500 kB"
   target: https://sandbox.north-europe.azure.keboola.com/50328125/
   phases:
-    - duration: 5   # Duration of this phase in seconds
-      arrivalRate: 2  # Number of new virtual users per second
+    - duration: 30   # Duration of this phase in seconds
+      arrivalRate: 1  # Number of new virtual users per second
   engines:
     playwright: {}
   processor: "./s500kb.js"

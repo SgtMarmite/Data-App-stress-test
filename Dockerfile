@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.34.3
+FROM mcr.microsoft.com/playwright
 
 RUN npm install -g artillery artillery-engine-playwright && \
         npm cache clean --force && \
